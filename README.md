@@ -72,44 +72,44 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi Enygma di perangka
 Proyek ini dibangun menggunakan **Android Native (Java)** dan mengikuti arsitektur modular yang rapi.
 
 * **Komponen Dasar Android:**
-    * **Activities:**  `LoginActivity`, `RegisterActivity` `MainActivity`, `PostDetailActivity` untuk mengelola interaksi pengguna utama. Aplikasi harus memiliki minimal dua Activity yang berbeda. [cite_start]Salah satu Activity harus menjadi Launcher aplikasi (MainActivity).
-    * **Fragments:** `HomeFragment`, `CreatePostFragment`, `ProfileFragment`, `JournalListFragment`, `CreateJournalFragment`, `JournalDetailFragment` untuk modularitas UI dan navigasi. [cite_start]Aplikasi harus memiliki minimal dua Fragment.
-    * **Intents:** Digunakan untuk berpindah antar Activity dan meneruskan data. [cite_start]Implementasikan penggunaan Intent untuk berkomunikasi dan berpindah antar Activity.
+    * **Activities:**  `LoginActivity`, `RegisterActivity` `MainActivity`, `PostDetailActivity` untuk mengelola interaksi pengguna utama. Aplikasi harus memiliki minimal dua Activity yang berbeda. Salah satu Activity harus menjadi Launcher aplikasi (MainActivity).
+    * **Fragments:** `HomeFragment`, `CreatePostFragment`, `ProfileFragment`, `JournalListFragment`, `CreateJournalFragment`, `JournalDetailFragment` untuk modularitas UI dan navigasi. Aplikasi harus memiliki minimal dua Fragment.
+    * **Intents:** Digunakan untuk berpindah antar Activity dan meneruskan data. Implementasikan penggunaan Intent untuk berkomunikasi dan berpindah antar Activity.
 
 * **Navigasi:**
-    * Menggunakan **Android Jetpack Navigation Component** (`mobile_navigation.xml`) untuk mengelola navigasi antar fragment, termasuk transisi dan argument passing. [cite_start]Gunakan Navigation Component untuk mengelola navigasi antar Fragment.
+    * Menggunakan **Android Jetpack Navigation Component** (`mobile_navigation.xml`) untuk mengelola navigasi antar fragment, termasuk transisi dan argument passing. Gunakan Navigation Component untuk mengelola navigasi antar Fragment.
     * **BottomNavigationView** terintegrasi dengan Navigation Component untuk navigasi utama aplikasi.
 
 * **Penyimpanan Data Lokal:**
-    * **SQLite Database:** Data utama (Postingan, Komentar, Pengguna, Jurnal) disimpan secara lokal menggunakan implementasi SQLite manual (`DatabaseHelper.java`). Ini memastikan persistensi data dan fungsionalitas offline. [cite_start]Gunakan SQLite atau SharedPreferences untuk menyimpan data secara lokal. [cite_start]Data yang disimpan harus dapat ditampilkan kembali ketika aplikasi tidak terhubung ke jaringan.
-    * **SharedPreferences:** Digunakan untuk menyimpan preferensi pengguna (seperti tema) dan status sesi (login, first-time user). [cite_start]Gunakan SQLite atau SharedPreferences untuk menyimpan data secara lokal.
+    * **SQLite Database:** Data utama (Postingan, Komentar, Pengguna, Jurnal) disimpan secara lokal menggunakan implementasi SQLite manual (`DatabaseHelper.java`). Ini memastikan persistensi data dan fungsionalitas offline. Gunakan SQLite atau SharedPreferences untuk menyimpan data secara lokal. Data yang disimpan harus dapat ditampilkan kembali ketika aplikasi tidak terhubung ke jaringan.
+    * **SharedPreferences:** Digunakan untuk menyimpan preferensi pengguna (seperti tema) dan status sesi (login, first-time user). Gunakan SQLite atau SharedPreferences untuk menyimpan data secara lokal.
 
 * **Manajemen Sesi & Autentikasi:**
     * Kelas `SessionManager.java` mengelola status login dan token autentikasi (disimpan di `SharedPreferences`).
     * Login dan registrasi diverifikasi secara lokal terhadap database SQLite (`User` tabel) untuk mensimulasikan proses autentikasi.
 
 * **Networking:**
-    * **Retrofit:** Digunakan untuk melakukan panggilan API ke layanan eksternal (`QuoteApiService`). [cite_start]Implementasikan fungsi untuk mengambil data dari API menggunakan Retrofit.
+    * **Retrofit:** Digunakan untuk melakukan panggilan API ke layanan eksternal (`QuoteApiService`). Implementasikan fungsi untuk mengambil data dari API menggunakan Retrofit.
     * **OkHttp Logging Interceptor:** Digunakan untuk *logging* permintaan dan respons HTTP untuk *debugging*.
-    * **API Kutipan:** Mengambil kutipan dari `https://zenquotes.io/api/random`. [cite_start]Data yang diambil harus ditampilkan di aplikasi.
-    * **Penanganan Offline/Error:** `NetworkManager` secara cerdas mendeteksi status jaringan dan menangani kegagalan API dengan menampilkan pesan error informatif (tidak ada *mock data* yang ditampilkan dari API jika gagal). [cite_start]Aplikasi memiliki tombol refresh saat gagal menampilkan data dari API (kondisi tidak ada jaringan).
+    * **API Kutipan:** Mengambil kutipan dari `https://zenquotes.io/api/random`. Data yang diambil harus ditampilkan di aplikasi.
+    * **Penanganan Offline/Error:** `NetworkManager` secara cerdas mendeteksi status jaringan dan menangani kegagalan API dengan menampilkan pesan error informatif (tidak ada *mock data* yang ditampilkan dari API jika gagal). Aplikasi memiliki tombol refresh saat gagal menampilkan data dari API (kondisi tidak ada jaringan).
 
 * **Background Processing:**
-    * Semua operasi database dan jaringan dijalankan di **`ExecutorService`** (`background thread`) untuk menjaga UI tetap responsif. [cite_start]Aplikasi harus menjalankan operasi di latar belakang menggunakan Executor maupun Handler.
-    * `Handler` digunakan untuk memperbarui UI (`main thread`) setelah operasi di latar belakang selesai. [cite_start]Aplikasi harus menjalankan operasi di latar belakang menggunakan Executor maupun Handler.
+    * Semua operasi database dan jaringan dijalankan di **`ExecutorService`** (`background thread`) untuk menjaga UI tetap responsif. Aplikasi harus menjalankan operasi di latar belakang menggunakan Executor maupun Handler.
+    * `Handler` digunakan untuk memperbarui UI (`main thread`) setelah operasi di latar belakang selesai. Aplikasi harus menjalankan operasi di latar belakang menggunakan Executor maupun Handler.
 
 * **Desain & Tema:**
     * Mengikuti prinsip **Material Design 3** untuk tampilan dan nuansa modern.
-    * Mendukung dua tema: terang dan gelap, yang dapat diubah melalui `ProfileFragment` menggunakan `ThemeManager` dan konfigurasi `themes.xml` yang sesuai. [cite_start]Aplikasi harus menerapkan dua tema (dark theme / light theme).
+    * Mendukung dua tema: terang dan gelap, yang dapat diubah melalui `ProfileFragment` menggunakan `ThemeManager` dan konfigurasi `themes.xml` yang sesuai. Aplikasi harus menerapkan dua tema (dark theme / light theme).
 
 ---
 
 **Catatan untuk Penilai:**
 
-* [cite_start]Proyek ini telah dikembangkan dengan fokus pada pemenuhan spesifikasi teknis Lab Mobile 2025.
+* Proyek ini telah dikembangkan dengan fokus pada pemenuhan spesifikasi teknis Lab Mobile 2025.
 * Fitur autentikasi (login/register) adalah simulasi lokal, bukan terhubung ke backend server nyata.
 * Fungsionalitas "Edit Profile" dan "Ganti Password" di `ProfileFragment` adalah implementasi lokal yang memodifikasi data di database SQLite.
 * Semua perubahan telah di-*commit* dengan pesan semantik yang berurutan.
-* [cite_start]Dokumentasi ini mencakup deskripsi aplikasi, cara penggunaan, dan penjelasan singkat tentang implementasi teknis.
+* Dokumentasi ini mencakup deskripsi aplikasi, cara penggunaan, dan penjelasan singkat tentang implementasi teknis.
 
 ---
