@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#673AB7</color> <color name="colorPrimaryVariant">#512DA8</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <color name="colorSecondary">#FFC107</color> <color name="colorSecondaryVariant">#FFB300</color>
+    <color name="colorOnSecondary">#000000</color>
+
+    <color name="colorError">#B00020</color>
+    <color name="colorOnError">#FFFFFF</color>
+
+    <color name="colorSurfaceLight">#FFFFFF</color>
+    <color name="colorOnSurfaceLight">#000000</color>
+    <color name="colorSurfaceVariantLight">#E0E0E0</color>
+    <color name="colorOnSurfaceVariantLight">#424242</color>
+    <color name="colorBackgroundLight">#F5F5F5</color>
+    <color name="colorOnBackgroundLight">#000000</color>
+
+    <color name="colorSecondaryContainerLight">#FFECB3</color>
+    <color name="colorOnSecondaryContainerLight">#424242</color>
+    <color name="colorTertiaryContainerLight">#E0F2F7</color>
+    <color name="colorOnTertiaryContainerLight">#424242</color>
+    <color name="colorErrorContainerLight">#FFCDD2</color>
+
+    <color name="colorSurfaceDark">#121212</color>
+    <color name="colorOnSurfaceDark">#FFFFFF</color>
+    <color name="colorSurfaceVariantDark">#2C2C2C</color>
+    <color name="colorOnSurfaceVariantDark">#B0B0B0</color>
+    <color name="colorBackgroundDark">#000000</color>
+    <color name="colorOnBackgroundDark">#FFFFFF</color>
+
+    <color name="colorSecondaryContainerDark">#795548</color>
+    <color name="colorOnSecondaryContainerDark">#FFFFFF</color>
+    <color name="colorTertiaryContainerDark">#4CAF50</color>
+    <color name="colorOnTertiaryContainerDark">#FFFFFF</color>
+    <color name="colorErrorContainerDark">#D32F2F</color>
+
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+
+
+    <!-- New colors for enhanced design -->
+    <color name="white_transparent">#33FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Gradient colors -->
+    <color name="gradient_start">#6366F1</color>
+    <color name="gradient_end">#8B5CF6</color>
+    <color name="gradient_start_dark">#5B21B6</color>
+    <color name="gradient_end_dark">#7C3AED</color>
+
+    <!-- Button colors -->
+    <color name="button_gradient_start">#7C3AED</color>
+    <color name="button_gradient_end">#A855F7</color>
+    <color name="button_pressed_start">#5B21B6</color>
+    <color name="button_pressed_end">#7C3AED</color>
+    <color name="button_disabled">#CCCCCC</color>
+
+</resources>

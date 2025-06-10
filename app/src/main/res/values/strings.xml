@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Enygma</string>
+    <string name="back_button_desc">Back button</string>
+    <string name="create_post_button_desc">Create new post</string>
+    <string name="total_posts_icon_desc">Icon representing total posts</string>
+    <string name="total_supports_icon_desc">Icon representing total supports</string>
+    <string name="add_journal_button_desc">Add journal button</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_create_post">Create</string>
+    <string name="menu_journal">Journal</string>
+    <string name="menu_profile">Profile</string>
+
+    <string-array name="post_categories">
+        <item>Lainnya</item>
+        <item>Keluarga</item>
+        <item>Cinta</item>
+        <item>Pekerjaan</item>
+        <item>Kesehatan Mental</item>
+        <item>Pendidikan</item>
+        <item>Keuangan</item>
+        <item>Persahabatan</item>
+        <item>Hobi</item>
+    </string-array>
+
+    <string-array name="post_moods">
+        <item>Netral</item>
+        <item>Senang</item>
+        <item>Bahagia</item>
+        <item>Sedih</item>
+        <item>Marah</item>
+        <item>Bingung</item>
+        <item>Takut</item>
+        <item>Kecewa</item>
+        <item>Lelah</item>
+        <item>Stress</item>
+        <item>Cemas</item>
+        <item>Optimis</item>
+        <item>Syukur</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

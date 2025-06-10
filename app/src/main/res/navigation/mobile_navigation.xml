@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.curhatku.fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.curhatku.fragments.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/createPostFragment"
+        android:name="com.example.curhatku.fragments.CreatePostFragment"
+        android:label="@string/menu_create_post"
+        tools:layout="@layout/fragment_create_post" />
+
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.example.curhatku.fragments.JournalListFragment"
+        android:label="@string/menu_journal"
+        tools:layout="@layout/fragment_journal_list" >
+        <action
+            android:id="@+id/action_journalListFragment_to_createJournalFragment"
+            app:destination="@id/createJournalFragment" />
+        <action
+            android:id="@+id/action_journalFragment_to_journalDetailFragment"
+            app:destination="@id/journalDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createJournalFragment"
+        android:name="com.example.curhatku.fragments.CreateJournalFragment"
+        android:label="@string/menu_journal"
+        tools:layout="@layout/fragment_create_journal" />
+
+    <fragment
+        android:id="@+id/journalDetailFragment"
+        android:name="com.example.curhatku.fragments.JournalDetailFragment"
+        android:label="Detail Jurnal"
+        tools:layout="@layout/fragment_journal_detail">
+        <argument
+            android:name="JOURNAL_ID"
+            app:argType="string" />
+    </fragment>
+</navigation>
